@@ -11,27 +11,56 @@ body {
     line-height: 1.6; 
 }
 
-/* Header */
+/* =========================================
+   HEADER Y LOGOTIPO INTEGRADO
+   ========================================= */
 .header { 
-    background: #1a1a1a; 
-    color: white; 
-    padding: 20px 50px; 
+    background: #ffffff; /* Fondo blanco corporativo limpio */
+    color: #333; 
+    padding: 12px 50px; 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
+/* Contenedor del logo para evitar saltos de línea y alinear perfecto */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Integración de la imagen: sin bordes raros, adaptada de forma fluida */
+.logo-img {
+    height: 55px; /* Altura ideal para mantener la barra estilizada */
+    width: auto;  /* Mantiene la proporción original y evita deformaciones */
+    object-fit: contain;
+    display: block;
+    background: transparent; /* Fuerza transparencia por si el archivo conserva rastro */
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+}
+
 .header a { 
-    color: white; 
+    color: #15325b; /* Enlaces en azul marino institucional */
     text-decoration: none; 
-    margin-left: 20px; 
-    font-weight: bold; 
+    margin-left: 30px; 
+    font-weight: 600; 
+    transition: color 0.2s ease;
 }
+
 .header a:hover {
     color: #e67e22;
 }
 
 /* Hero Section */
-/* Sección Hero con fondo azul y foto de stock provisional */
 .hero { 
     background: linear-gradient(rgba(21, 50, 91, 0.85), rgba(21, 50, 91, 0.95)), 
                 url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1920&auto=format&fit=crop');
@@ -88,7 +117,7 @@ body {
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
     width: 320px; 
-    border-top: 4px solid #e67e22;
+    border-top: 4px solid #15325b; /* Línea superior combinando con el logo */
 }
 .service-card h3 {
     margin-bottom: 15px;
@@ -110,56 +139,6 @@ footer {
     text-align: center; 
     padding: 20px; 
     font-size: 0.9rem;
-}
-
-/* Controla el tamaño del logo en la barra superior */
-.logo-img {
-    height: 60px; /* Puedes subir o bajar este valor para ajustarlo */
-    object-fit: contain;
-}
-
-/* Actualizamos el color de fondo del encabezado para que el logo resalte */
-.header { 
-    background: #ffffff; /* Fondo blanco para el menú */
-    color: #333; 
-    padding: 15px 50px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.header a { 
-    color: #1a365d; /* Enlaces en azul marino */
-    text-decoration: none; 
-    margin-left: 20px; 
-    font-weight: bold; 
-}
-
-/* Botón principal alineado al color de tu logo 
-.btn-primary { 
-    display: inline-block; 
-    background: #15325b; /* Azul marino basado en el logo 
-    color: white; 
-    padding: 15px 30px; 
-    text-decoration: none; 
-    border-radius: 5px; 
-    font-weight: bold; 
-    margin-top: 20px; 
-    transition: background 0.3s;
-}
-.btn-primary:hover {
-    background: #0d1e38; /* Azul más oscuro al pasar el mouse 
-}
-*/
-
-/* Tarjetas de servicios con el detalle de color */
-.service-card { 
-    background: white; 
-    padding: 30px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-    width: 320px; 
-    border-top: 4px solid #15325b; /* Línea superior combinando con el logo */
 }
 
 /* =========================================
@@ -218,7 +197,17 @@ footer {
 /* =========================================
    RESPONSIVE (PARA CELULARES)
    ========================================= */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 20px;
+    }
+    .logo-img {
+        height: 42px; /* Ligeramente más compacto en móviles */
+    }
+    .header a {
+        margin-left: 15px;
+        font-size: 0.95rem;
+    }
     /* En celulares, los campos que estaban en dos columnas se apilan uno sobre otro */
     .form-row {
         flex-direction: column;
