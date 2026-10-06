@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constru | Edificaciones y Estructuras Industriales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ENCABEZADO -->
+    <header class="header">
+        <img src="1000159262.jpg" alt="Logo Constru Edificaciones" class="logo-img">
+        <nav class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN HERO (Principal) -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Especialistas en Construcción de Naves y Plantas Industriales</h1>
+            <p>Soluciones integrales en construcción, supervisión de obra y proveeduría de materiales para proyectos de ingeniería civil.</p>
+            <a href="#contacto" class="btn-primary">Cotiza tu Proyecto</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Construcción Industrial y Comercial</h3>
+                <p>Diseño y edificación de naves, plantas industriales, así como inmuebles comerciales, institucionales y de servicios.</p>
+            </div>
+            <div class="service-card">
+                <h3>Supervisión y Administración</h3>
+                <p>Supervisión experta para proyectos de vivienda, ingeniería civil y obras pesadas, garantizando calidad estructural.</p>
+            </div>
+            <div class="service-card">
+                <h3>Proveeduría de Materiales</h3>
+                <p>Comercio al por mayor de materiales metálicos y diversos insumos especializados para la construcción.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <p><strong>Ubicación:</strong> Calle 18 #376, entre Calle Primera y Segunda, Col. Los Álamos, Gómez Palacio, Durango. C.P. 35024</p>
+            <p><strong>Teléfono:</strong> +52 (871) 579 3732</p>
+            <p><strong>Correo:</strong> gerencia@construedificaciones.com.mx</p>
+        </div> <!-- AQUÍ CERRAMOS contact-info -->
+            
+        <!-- El formulario de Netlify Forms empieza de forma independiente -->
+        <h2>Cotiza tu Proyecto</h2>
+        <form class="contact-form" name="cotizacion" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="cotizacion">
+            
+            <div class="form-row">
+                <input type="text" name="nombre" placeholder="Nombre completo" required>
+                <input type="email" name="correo" placeholder="Correo electrónico" required>
+            </div>
+            <div class="form-row">
+                <input type="tel" name="telefono" placeholder="Teléfono" required>
+                <input type="text" name="asunto" placeholder="Tipo de edificación o material">
+            </div>
+            <textarea name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto industrial..." required></textarea>
+            <button type="submit" class="btn-primary">Enviar Mensaje</button>
+        </form>
+    </section>
+
+<!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Constru Edificaciones y Estructuras Industriales. Todos los derechos reservados. | <a href="privacidad.html" style="color: #ffffff; text-decoration: underline;">Aviso de Privacidad</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+/* style.css - Paleta Industrial */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Arial', sans-serif; 
+}
+
+body { 
+    color: #333; 
+    line-height: 1.6; 
+}
+
+/* Header */
+.header { 
+    background: #1a1a1a; 
+    color: white; 
+    padding: 20px 50px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.header a { 
+    color: white; 
+    text-decoration: none; 
+    margin-left: 20px; 
+    font-weight: bold; 
+}
+.header a:hover {
+    color: #e67e22;
+}
+
+/* Hero Section */
+/* Sección Hero con fondo azul y foto de stock provisional */
+.hero { 
+    background: linear-gradient(rgba(21, 50, 91, 0.85), rgba(21, 50, 91, 0.95)), 
+                url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    padding: 150px 20px; 
+    text-align: center; 
+}
+.hero h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+}
+.btn-primary {
+    display: inline-block;
+    background-color: #FFCC00; /* Amarillo maquinaria/industrial */
+    color: #15325b; /* Texto en azul marino para un contraste impecable */
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #E6B800; /* Amarillo un tono más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Pequeño efecto de elevación al interactuar */
+}
+
+
+/* Servicios */
+.services { 
+    padding: 60px 20px; 
+    text-align: center; 
+    background: #f4f4f4; 
+}
+.services h2 {
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+.services-grid { 
+    display: flex; 
+    gap: 30px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+.service-card { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    width: 320px; 
+    border-top: 4px solid #e67e22;
+}
+.service-card h3 {
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+/* Contacto y Footer */
+.contact { 
+    padding: 60px 20px; 
+    text-align: center; 
+}
+.contact-info p {
+    margin: 10px 0;
+}
+
+footer { 
+    background: #1a1a1a; 
+    color: #999; 
+    text-align: center; 
+    padding: 20px; 
+    font-size: 0.9rem;
+}
+
+/* Controla el tamaño del logo en la barra superior */
+.logo-img {
+    height: 60px; /* Puedes subir o bajar este valor para ajustarlo */
+    object-fit: contain;
+}
+
+/* Actualizamos el color de fondo del encabezado para que el logo resalte */
+.header { 
+    background: #ffffff; /* Fondo blanco para el menú */
+    color: #333; 
+    padding: 15px 50px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.header a { 
+    color: #1a365d; /* Enlaces en azul marino */
+    text-decoration: none; 
+    margin-left: 20px; 
+    font-weight: bold; 
+}
+
+/* Botón principal alineado al color de tu logo 
+.btn-primary { 
+    display: inline-block; 
+    background: #15325b; /* Azul marino basado en el logo 
+    color: white; 
+    padding: 15px 30px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    margin-top: 20px; 
+    transition: background 0.3s;
+}
+.btn-primary:hover {
+    background: #0d1e38; /* Azul más oscuro al pasar el mouse 
+}
+*/
+
+/* Tarjetas de servicios con el detalle de color */
+.service-card { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    width: 320px; 
+    border-top: 4px solid #15325b; /* Línea superior combinando con el logo */
+}
+
+/* =========================================
+   ESTILOS DEL FORMULARIO DE CONTACTO
+   ========================================= */
+
+.contact-form {
+    max-width: 700px; /* Limita el ancho para que no se estire demasiado en PC */
+    margin: 40px auto 0; /* Lo centra horizontalmente y le da espacio arriba */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre cada fila */
+    text-align: left; /* Alinea el texto de los campos a la izquierda */
+}
+
+/* Fila de dos columnas para pantallas grandes */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hace que los inputs dentro de form-row ocupen mitad y mitad */
+.form-row input {
+    flex: 1; 
+}
+
+/* Diseño de las cajas de texto */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #fcfcfc;
+    transition: border-color 0.3s;
+}
+
+/* Color azul del logo cuando el usuario hace clic para escribir */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #15325b; 
+    background-color: #ffffff;
+}
+
+/* Ajuste del botón para que ocupe todo el ancho del formulario */
+.contact-form .btn-primary {
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+}
+
+/* =========================================
+   RESPONSIVE (PARA CELULARES)
+   ========================================= */
+@media (max-width: 600px) {
+    /* En celulares, los campos que estaban en dos columnas se apilan uno sobre otro */
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
