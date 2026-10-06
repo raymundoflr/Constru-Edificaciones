@@ -219,3 +219,29 @@ footer {
         gap: 20px;
     }
 }
+
+.rf-digital-badge {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: sans-serif;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.rf-digital-badge:hover {
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+.rf-digital-badge strong {
+    color: #38bdf8;
+}
