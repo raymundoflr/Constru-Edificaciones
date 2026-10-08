@@ -1,0 +1,23 @@
+name: Respaldo Mensual Interno
+
+on:
+  schedule:
+    - cron: '0 0 1 * *' 
+  workflow_dispatch: 
+
+jobs:
+  respaldo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Obtener el código actual
+        uses: actions/checkout@v4
+
+      - name: 2. Comprimir los archivos
+        run: zip -r respaldo_landing.zip . -x ".git/*" ".github/*"
+
+      - name: 3. Guardar el archivo en GitHub
+        uses: actions/upload-artifact@v4
+        with:
+          name: respaldo-mensual
+          path: respaldo_landing.zip
+          retention-days: 90
